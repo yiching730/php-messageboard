@@ -35,6 +35,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 		<a href=" edit.php?no=' . $row['no'] . '&name=' . $name . '">
 		Edit message content</a>&nbsp|&nbsp<a href="delete.php?no=' . $row['no'] . '">Delete the message</a><br>';
 	}
+	
 	echo "Time：" . $row['time'] . "<br>";
 	echo "<hr>";
 

@@ -45,7 +45,7 @@ header("Content-Type: text/html; charset=utf8");
 if (isset($_POST['submit'])) { 
 	include 'db.php';
 	$name = $_POST['name'];
-	$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+	$password = $_POST['password'];
 	if ($name && $password) {
 		$sql = "select * from user where name = '$name'";
 		$result = mysqli_query($db, $sql);
